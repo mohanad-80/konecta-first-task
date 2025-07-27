@@ -182,9 +182,20 @@ h2 {
 
 .cart h3 {
   margin-top: 0;
-  color: #333;
+  color: hsl(14, 86%, 42%);
   border-bottom: 1px solid #eee;
   padding-bottom: 10px;
+}
+
+.cart-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-content img {
+  height: 150px;
+  width:  150px;
 }
 
 .cart p {

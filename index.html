@@ -25,8 +25,8 @@
     </style>
   </head>
   <body>
-    <h2>Desserts</h2>
     <div class="main-content">
+      <h2>Desserts</h2>
       <div class="products">
         <div class="product-card">
           <img
@@ -36,11 +36,17 @@
           />
           <div class="quantity-btn">
             <button class="quantity-decrease">
-              <img src="./assets/images/icon-decrement-quantity.svg" alt="decrement product quantity">
+              <img
+                src="./assets/images/icon-decrement-quantity.svg"
+                alt="decrement product quantity"
+              />
             </button>
             <span class="quantity-value">1</span>
             <button class="quantity-increase">
-              <img src="./assets/images/icon-increment-quantity.svg" alt="increment product quantity">
+              <img
+                src="./assets/images/icon-increment-quantity.svg"
+                alt="increment product quantity"
+              />
             </button>
           </div>
           <h5 class="product-category">Waffle</h5>
@@ -211,8 +217,14 @@
     </div>
 
     <div class="cart">
-      <h3>Your Cart (<!-- Quantity -->)</h3>
-      <p>Your added items will appear here</p>
+      <h3 class="cart-header">Your Cart (0)</h3>
+      <div class="cart-content">
+        <img
+          src="./assets/images/illustration-empty-cart.svg"
+          alt="empty cart illustration"
+        />
+        <p>Your added items will appear here</p>
+      </div>
     </div>
 
     <div class="attribution">
