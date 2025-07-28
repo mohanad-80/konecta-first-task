@@ -180,7 +180,7 @@ h2 {
   grid-column: 2;
 }
 
-.cart h3 {
+.cart-header {
   margin-top: 0;
   color: hsl(14, 86%, 42%);
   border-bottom: 1px solid #eee;
@@ -256,6 +256,40 @@ h2 {
   width: 12px;
 }
 
+.cart-total-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carbon-neutral {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  background-color: hsl(13, 31%, 94%);
+}
+
+.carbon-neutral-text {
+  font-size: 13px;
+}
+
+.confirm-order-btn {
+  background-color: hsl(14, 86%, 42%);
+  border: none;
+  border-radius: 50px;
+  height: 40px;
+  width: 100%;
+  padding: 0 15px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: white;
+}
+
+.confirm-order-btn:hover {
+  background-color: hsl(14, 85%, 32%);
+}
 
 /* Attribution */
 .attribution {
