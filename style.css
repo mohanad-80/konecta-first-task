@@ -336,7 +336,7 @@ body {
 /* Modal Content/Box */
 .modal-content {
   background-color: white;
-  margin: 15% auto;
+  margin: 5% auto 15% auto;
   padding: 20px;
   border-radius: 8px;
   width: 350px;
