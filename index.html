@@ -281,7 +281,9 @@
           This is a <strong>carbon-neutral</strong> delivery
         </p>
       </div>
-      <button class="confirm-order-btn">Confirm Order</button>
+      <button id="confirm-order-btn" class="confirm-order-btn">
+        Confirm Order
+      </button>
     </div>
 
     <div class="attribution">
@@ -289,5 +291,64 @@
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <div class="confirmation-msg">
+          <img
+            src="./assets/images/icon-order-confirmed.svg"
+            alt="order confirmed icon"
+          />
+          <h2>Order Confirmed</h2>
+          <p>We hope you enjoy your food!</p>
+        </div>
+        <div class="order-details">
+          <div class="order-item">
+          <img src="./assets/images/image-waffle-thumbnail.jpg" alt="order item thumbnail" class="order-item-thumbnail">
+            <div class="order-item-details">
+              <h5 class="order-item-name">Waffle with Berries</h5>
+              <div class="order-item-price-details">
+                <p class="order-item-quantity">1x</p>
+                <p class="order-item-price">@ $5.60</p>
+              </div>
+            </div>
+            <p class="order-item-total-price">$5.60</p>
+          </div>
+          <div class="order-item">
+          <img src="./assets/images/image-waffle-thumbnail.jpg" alt="order item thumbnail" class="order-item-thumbnail">
+            <div class="order-item-details">
+              <h5 class="order-item-name">Waffle with Berries</h5>
+              <div class="order-item-price-details">
+                <p class="order-item-quantity">1x</p>
+                <p class="order-item-price">@ $5.60</p>
+              </div>
+            </div>
+            <p class="order-item-total-price">$5.60</p>
+          </div>
+          <div class="order-total-details">
+            <p>Order Total</p>
+            <h3 class="order-total-price">$46.50</h3>
+          </div>
+        </div>
+        <button class="start-new-order-btn">Start New Order</button>
+      </div>
+    </div>
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById("modal");
+      // Get the button that opens the modal
+      var confirmOrderBtn = document.getElementById("confirm-order-btn");
+      // When the user clicks the button, open the modal
+      confirmOrderBtn.onclick = function () {
+        modal.style.display = "block";
+      };
+      // When the user clicks anywhere outside of the modal content, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
   </body>
 </html>
