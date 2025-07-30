@@ -19,12 +19,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // State
   let cart = [];
   let products = [];
+  let activeCategories = [];
 
-  // Initialize the app
   async function init() {
     try {
       const response = await fetch("./data.json");
       products = await response.json();
+      initializeCategoryFilter();
       renderProducts();
     } catch (error) {
       console.error("Error loading products:", error);
@@ -36,10 +37,57 @@ document.addEventListener("DOMContentLoaded", function () {
     startNewOrderBtn.addEventListener("click", startNewOrder);
   }
 
+  function initializeCategoryFilter() {
+    const categories = [...new Set(products.map((p) => p.category))];
+    const filterChipsContainer = document.querySelector(".filter-chips");
+
+    if (!filterChipsContainer) return;
+
+    filterChipsContainer.innerHTML = "";
+
+    categories.forEach((category) => {
+      const chip = document.createElement("button");
+
+      chip.type = "button";
+      chip.classList.add("filter-chip");
+      chip.innerText = category;
+
+      if (activeCategories.includes(category)) {
+        chip.classList.add("active");
+      }
+
+      filterChipsContainer.appendChild(chip);
+      chip.addEventListener("click", handleFilterChange);
+    });
+  }
+
+  function handleFilterChange(event) {
+    const clickedCategory = event.target.innerText;
+
+    if (event.target.classList.contains("active")) {
+      const idx = activeCategories.indexOf(clickedCategory);
+      activeCategories.splice(idx, 1);
+
+      event.target.classList.remove("active");
+    } else {
+      activeCategories.push(clickedCategory);
+
+      event.target.classList.add("active");
+    }
+
+    updateUI();
+  }
+
   function renderProducts() {
     productsContainer.innerHTML = "";
 
-    products.forEach((product) => {
+    const filteredProducts = products.filter((product) => {
+      if (activeCategories.length === 0) return true;
+
+      return activeCategories.includes(product.category);
+    });
+
+    filteredProducts.forEach((product) => {
       const productCard = document.createElement("div");
       productCard.className = "product-card";
 
@@ -305,5 +353,5 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  init(); 
+  init();
 });
