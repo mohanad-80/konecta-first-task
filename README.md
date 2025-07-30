@@ -42,7 +42,7 @@ Added features not part of the challenge:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Live Site URL](https://mohanad-80.github.io/konecta-first-task/)
 
 ## My process
 
