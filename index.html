@@ -30,26 +30,48 @@
       <div class="products"></div>
     </div>
 
-    <div class="cart">
-      <h3 class="cart-header">Your Cart (0)</h3>
-      <div class="cart-content"></div>
-      <div class="cart-total-details">
-        <p>Order Total</p>
-        <h3 class="cart-total-price">$0</h3>
+    <div class="right-panel">
+      <div class="cart">
+        <h3 class="cart-header">Your Cart (0)</h3>
+        <div class="cart-content"></div>
+        <div class="cart-total-details">
+          <p>Order Total</p>
+          <h3 class="cart-total-price">$0</h3>
+        </div>
+        <div class="carbon-neutral">
+          <img
+            class="carbon-neutral-icon"
+            src="./assets/images/icon-carbon-neutral.svg"
+            alt="tree icon"
+          />
+          <p class="carbon-neutral-text">
+            This is a <strong>carbon-neutral</strong> delivery
+          </p>
+        </div>
+        <button id="confirm-order-btn" class="confirm-order-btn">
+          Confirm Order
+        </button>
       </div>
-      <div class="carbon-neutral">
-        <img
-          class="carbon-neutral-icon"
-          src="./assets/images/icon-carbon-neutral.svg"
-          alt="tree icon"
-        />
-        <p class="carbon-neutral-text">
-          This is a <strong>carbon-neutral</strong> delivery
-        </p>
+      <div class="category-filter">
+        <h5>Filter by category:</h5>
+        <div class="filter-chips">
+          <button type="button" class="filter-chip active" data-category="All">
+            All
+          </button>
+          <button type="button" class="filter-chip" data-category="Pie">
+            Pie
+          </button>
+          <button type="button" class="filter-chip" data-category="Cake">
+            Cake
+          </button>
+          <button type="button" class="filter-chip" data-category="Brownie">
+            Brownie
+          </button>
+          <button type="button" class="filter-chip" data-category="Panna-Cotta">
+            Panna Cotta
+          </button>
+        </div>
       </div>
-      <button id="confirm-order-btn" class="confirm-order-btn">
-        Confirm Order
-      </button>
     </div>
 
     <div class="attribution">
